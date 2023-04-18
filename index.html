@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Red Fingers - Productor Musical</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  </head>
+
+
+  <body>
+
+
+    <header>
+      <nav>
+        <ul>
+          <li><a href="#inicio">Red Fingers</a></li>
+          <li><a href="#acerca-de">Acerca de</a></li>
+          <li><a href="#temas">Temas</a></li>
+          <li><a href="#redes-sociales">Redes Sociales</a></li>
+          <li><a href="#clases">Clases</a></li>
+          <li><a href="#contacto">Contacto</a></li>
+        </ul>
+      </nav>
+    </header>
+
+
+    <main>
+      <section id="inicio">
+        <div class="imagen-productor">
+          <img src="img/productor.jpg" alt="Red Fingers">
+        </div>
+      </section>
+
+      <section id="acerca-de">
+        <h2>Acerca de</h2>
+        <p>"El proyecto Red Fingers significa la búsqueda de lo nuevo y el quiebre de ciertas costumbres a la hora de crear. Mi idea es poder encontrar un sonido nuevo y diferente cada vez que trabajo con un artista nuevo."</p>
+        <p>Red Fingers, es un productor, músico y compositor chileno, cuyas colaboraciones y canciones en donde ofició de productor ya suman más de 130 millones de reproducciones, siendo uno de los productores musicales con mayor ascenso y proyección del país.</p>
+    </section>
+
+      <section id="temas">
+        <h2>Temas</h2>
+        <div class="videos">
+          <iframe width="600" height="338" src="https://www.youtube.com/embed/L46JhW3LDb4" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+          <iframe width="600" height="338" src="https://www.youtube.com/embed/cI-s7h31QXU" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+          <iframe width="600" height="338" src="https://www.youtube.com/embed/Y465pkGkJ_U" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+          <iframe width="600" height="338" src="https://www.youtube.com/embed/MKNc6Bp7Oi4" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+          <iframe width="600" height="338" src="https://www.youtube.com/embed/RwDpJPDKSxo" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+          <iframe width="600" height="338" src="https://www.youtube.com/embed/yVvpnmC_A3M" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+          <iframe width="600" height="338" src="https://www.youtube.com/embed/umFIYLxj96s" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+          <iframe width="600" height="338" src="https://www.youtube.com/embed/HUQNuFVSV8s" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+          <iframe width="600" height="338" src="https://www.youtube.com/embed/GCigUQMfOTA" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+          <iframe width="600" height="338" src="https://www.youtube.com/embed/3Gd3NNvfqGk" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        </div>
+        <div class="videos-nav">
+            <div class="videos-prev">&lt;</div>
+            <div class="videos-next">&gt;</div>
+        </div>
+      </section>
+
+      <section id="redes-sociales">
+        <h2>Redes Sociales</h2>
+        <div class="redes-sociales-container">
+          <div class="redes-sociales-slider">
+            <img src="img/instagram-1.png" alt="">
+            <img src="img/instagram-2.png" alt="">
+            <img src="img/instagram-3.png" alt="">
+            <img src="img/instagram-4.png" alt="">
+          </div>
+          <div class="redes-sociales-prev">&#10094;</div>
+          <div class="redes-sociales-next">&#10095;</div>
+        </div>
+      </section>
+
+      <section id="clases">
+        <h2>Clases</h2>
+        <p>Red Fingers ofrece cursos de producción musical. Para más información, contáctalo a través del formulario de contacto.</p>
+      </section>
+
+        <section id="contacto">
+            <h2>Contacto</h2>
+            <form action="enviar.php" method="post">
+            <label for="nombre">Nombre:</label>
+            <input type="text" id="nombre" name="nombre" required>
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+            <label for="mensaje">Mensaje:</label>
+            <textarea id="mensaje" name="mensaje" required></textarea>
+            <button type="submit">Enviar</button>
+            </form>
+        </section>
+
+        </main>
+        <script src="script.js"></script>
+        <script src="index.js"></script>
+     </body>
+</html>
