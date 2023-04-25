@@ -200,35 +200,6 @@ body {
   height: 40px;
 }
 
-.videos-prev,
-.videos-next {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  position: absolute;
-  top: 0;
-  width: 40px;
-  height: 40px;
-  font-size: 24px;
-  color: #fff;
-  background-color: #f00;
-  border: none;
-  cursor: pointer;
-}
-
-.videos-prev:hover,
-.videos-next:hover {
-  background-color: #ff1a1a;
-}
-
-.videos-prev {
-  left: 0;
-}
-
-.videos-next {
-  right: 0;
-}
-
 .imagen-texto {
     position: absolute;
     bottom: 0;
