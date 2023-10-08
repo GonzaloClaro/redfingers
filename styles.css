@@ -236,13 +236,22 @@ button[type="submit"]:hover {
         font-size: 18px;
     }
 
+    header {
+        padding: 20px 0; /* Reducir el padding vertical */
+    }
+
     nav ul {
-        flex-direction: column;
+        flex-direction: row;
         align-items: center;
     }
 
     nav ul li {
-        margin: 10px 0;
+        margin: 0px 0;
+    }
+
+    nav ul li a {
+        font-size: 11px; /* Reducir el tamaño de fuente */
+        padding: 3px 6px; /* Reducir el padding */
     }
 
     .videos iframe {
