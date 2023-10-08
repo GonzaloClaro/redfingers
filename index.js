@@ -6,9 +6,17 @@ let counter = 0;
 const size = slider.children[0].clientWidth;
 
 prevBtn.addEventListener('click', () => {
-  counter--;
+  counter -= 3; // Cambia el 1 a 3
   if (counter < 0) {
-    counter = slider.children.length - 1;
+    counter = 0; // Asegúrate de que no se desplace más allá del inicio
+  }
+  slider.style.transform = `translateX(-${size * counter}px)`;
+});
+
+nextBtn.addEventListener('click', () => {
+  counter += 3; // Cambia el 1 a 3
+  if (counter > slider.children.length - 1) {
+    counter = slider.children.length - 3; // Asegúrate de que no se desplace más allá del final
   }
   slider.style.transform = `translateX(-${size * counter}px)`;
 });
