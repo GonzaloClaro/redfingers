@@ -79,7 +79,7 @@ h2 {
 
 #about p:first-of-type {
     font-style: italic;
-    color: #ffb7b7;
+    color: #ff8c8c;
 }
 
 /* Cambia el color del enlace a rojo solo dentro de la sección con id="temas" */
@@ -250,7 +250,7 @@ button[type="submit"]:hover {
     }
 
     nav ul li a {
-        font-size: 11px; /* Reducir el tamaño de fuente */
+        font-size: 15px; /* Reducir el tamaño de fuente */
         padding: 3px 6px; /* Reducir el padding */
     }
 
