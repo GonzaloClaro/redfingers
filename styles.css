@@ -1,7 +1,7 @@
 body {
     font-family: "Poppins", sans-serif;
     font-size: 25px;
-    line-height: 1.6;
+    line-height: 1.3;
     background-color: #000; /* Fondo oscuro */
     color: #fff; /* Texto blanco */
     margin: 0;
@@ -46,7 +46,7 @@ nav ul li a:hover {
 
 main {
     max-width: 1000px;
-    margin: 80px auto 0;
+    margin: 78px auto 0;
     padding: 20px;
     background-color: #141313; /* Fondo ligeramente más claro que el body */
     box-shadow: 0 2px 15px rgba(0, 0, 0, 0.3); /* Sombra más oscura */
@@ -54,13 +54,8 @@ main {
     transition: transform 0.3s; /* Animación al pasar el mouse */
 }
 
-main:hover {
-    transform: scale(1.01); /* Efecto de "zoom" al pasar el mouse */
-}
-
-
 section {
-    margin: 50px 0;
+    margin: 40px 0;
 }
 
 h2 {
@@ -82,18 +77,18 @@ h2 {
     box-shadow: 0 2px 15px rgba(0, 0, 0, 0);
 }
 
-#acerca-de p:first-of-type {
+#about p:first-of-type {
     font-style: italic;
     color: #ffb7b7;
 }
 
 /* Cambia el color del enlace a rojo solo dentro de la sección con id="temas" */
-#temas a {
+#songs a {
     color: red;
 }
 
 /* Opcional: Cambia el color del enlace a otro color cuando se pasa el ratón por encima (hover) */
-#temas a:hover {
+#songs a:hover {
     color: rgb(255, 67, 67);
 }
 
@@ -150,11 +145,11 @@ button[type="submit"]:hover {
 }
 
 
-#redes-sociales {
+#social-media {
     margin-bottom: 50px;
 }
 
-.redes-sociales-container {
+.social-media-container {
     display: flex;
     overflow-x: auto; /* Habilita el scroll lateral */
     white-space: nowrap; /* Evita que los elementos se envuelvan a la siguiente línea */
@@ -162,7 +157,7 @@ button[type="submit"]:hover {
     overflow: hidden;
 }
 
-.redes-sociales-slider {
+.social-media-slider {
     display: flex;
     transition: transform 0.4s ease-in-out;
     width: fit-content; /* Ajusta el ancho al contenido */
@@ -170,21 +165,22 @@ button[type="submit"]:hover {
 }
 
 
-.redes-sociales-slider img {
+.social-media-slider img {
     width: 200px;
     height: 200px;
     margin-right: 10px;
     border-radius: 10px;
     box-shadow: 0 2px 15px rgba(0, 0, 0, 0.1);
+    
 }
 
 /* Asegúrate de que el último elemento no tenga un margen a la derecha */
-.redes-sociales-slider img:last-child {
+.social-media-slider img:last-child {
     margin-right: 0;
 }
 
-.redes-sociales-prev,
-.redes-sociales-next {
+.social-media-prev,
+.social-media-next {
     color: #f00;
     position: absolute;
     top: 50%;
@@ -201,15 +197,60 @@ button[type="submit"]:hover {
     transition: background-color 0.3s; /* Efecto de transición al pasar el mouse por encima */
 }
 
-.redes-sociales-prev:hover,
-.redes-sociales-next:hover {
+.social-media-prev:hover,
+.social-media-next:hover {
     background-color: rgba(255, 255, 255, 0.9); /* Cambio de color al pasar el mouse por encima */
 }
 
-.redes-sociales-prev {
+.social-media-prev {
     left: 10px; /* Posicionamiento del botón izquierdo */
 }
 
-.redes-sociales-next {
+.social-media-next {
     right: 10px; /* Posicionamiento del botón derecho */
+}
+
+.social-icons {
+    text-align: center;
+    padding: 20px 0;
+}
+
+.social-icons a {
+    margin: 0 10px;
+}
+
+.social-icons img {
+    width: 50px; /* o el tamaño que prefieras */
+    height: auto;
+    transition: 0.3s;
+}
+
+.social-icons img:hover {
+    opacity: 0.7;
+    transform: scale(1.5); /* Efecto de "zoom" al pasar el mouse */
+}
+
+/* Estilos para pantallas de hasta 768px (tablets y móviles) */
+@media (max-width: 768px) {
+    body {
+        font-size: 18px;
+    }
+
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    nav ul li {
+        margin: 10px 0;
+    }
+
+    .videos iframe {
+        max-width: 100%;
+        height: auto;
+    }
+
+    .social-icons img {
+        width: 30px;
+    }
 }

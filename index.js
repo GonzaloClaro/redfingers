@@ -1,6 +1,6 @@
-const slider = document.querySelector('.redes-sociales-slider');
-const prevBtn = document.querySelector('.redes-sociales-prev');
-const nextBtn = document.querySelector('.redes-sociales-next');
+const slider = document.querySelector('.social-media-slider');
+const prevBtn = document.querySelector('.social-media-prev');
+const nextBtn = document.querySelector('.social-media-next');
 
 let counter = 0;
 const size = slider.children[0].clientWidth;
@@ -9,6 +9,14 @@ prevBtn.addEventListener('click', () => {
   counter -= 3; // Cambia el 1 a 3
   if (counter < 0) {
     counter = 0; // Asegúrate de que no se desplace más allá del inicio
+  }
+  slider.style.transform = `translateX(-${size * counter}px)`;
+});
+
+prevBtn.addEventListener('click', () => {
+  counter--;
+  if (counter < 0) {
+    counter = slider.children.length - 4;
   }
   slider.style.transform = `translateX(-${size * counter}px)`;
 });
