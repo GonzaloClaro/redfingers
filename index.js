@@ -79,19 +79,26 @@ videosNext.addEventListener('click', nextVideo);
   
   
   
-  // Manejar el clic en los enlaces del menú
-  const menuLinks = document.querySelectorAll('nav a');
-  
-  menuLinks.forEach(link => {
+// Manejar el clic en los enlaces del menú
+const menuLinks = document.querySelectorAll('nav a');
+
+menuLinks.forEach(link => {
     link.addEventListener('click', e => {
-      e.preventDefault();
-  
-      // Obtener la sección correspondiente al enlace
-      const sectionId = link.getAttribute('href');
-      const section = document.querySelector(sectionId);
-  
-      // Desplazarse a la sección
-      section.scrollIntoView({ behavior: 'smooth' });
+        e.preventDefault();
+
+        // Obtener la sección correspondiente al enlace
+        const sectionId = link.getAttribute('href');
+        const section = document.querySelector(sectionId);
+
+        // Calcular la posición de desplazamiento ajustada
+        const headerHeight = document.querySelector('header').offsetHeight;
+        const offsetTop = section.offsetTop - headerHeight;
+
+        // Desplazarse a la posición ajustada
+        window.scrollTo({
+            top: offsetTop,
+            behavior: 'smooth'
+        });
     });
-  });
-  
+});
+
