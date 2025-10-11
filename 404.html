@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Red Fingers</title>
+    <script>
+        // GitHub Pages URL handling for clean URLs
+        (function() {
+            var path = window.location.pathname;
+            
+            // Handle /hilorojo redirect
+            if (path === '/hilorojo' || path === '/hilorojo/') {
+                window.location.replace('/hilorojo/');
+                return;
+            }
+            
+            // For other 404s, redirect to home
+            window.location.replace('/');
+        })();
+    </script>
+</head>
+<body>
+    <p>Redirecting...</p>
+</body>
+</html>
