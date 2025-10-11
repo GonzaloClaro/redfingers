@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Red Fingers - Put your fingers on the beat</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Red Fingers - Chilean producer, musician and composer based in Los Angeles. Over 150 million views across platforms.">
+    <link rel="stylesheet" type="text/css" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  </head>
+
+  <body>
+    <!-- Loading Screen -->
+    <div id="loading-screen" class="loading-screen">
+      <div class="loading-content">
+        <div class="loading-logo">Red Fingers</div>
+        <div class="loading-spinner"></div>
+      </div>
+    </div>
+
+    <!-- Navigation -->
+    <header class="header">
+      <nav class="nav">
+        <div class="nav-brand">
+          <a href="#inicio" class="brand-link">Red Fingers</a>
+        </div>
+        <div class="nav-menu" id="nav-menu">
+          <a href="index.html" class="nav-link">Home</a>
+          <a href="#about" class="nav-link">About</a>
+          <a href="#songs" class="nav-link">Music</a>
+          <a href="hilorojo.html" class="nav-link hilo-rojo-nav">HILO ROJO</a>
+          <a href="#social-media" class="nav-link">Gallery</a>
+          <a href="#contact" class="nav-link">Contact</a>
+        </div>
+        <div class="nav-toggle" id="nav-toggle">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+      </nav>
+    </header>
+
+    <main>
+      <!-- Hero Section -->
+      <section id="inicio" class="hero">
+        <div class="hero-background">
+          <div class="hero-overlay"></div>
+        </div>
+        <div class="hero-content">
+          <div class="hero-image">
+            <img src="img/landing.png" alt="Red Fingers" class="hero-img">
+          </div>
+          <div class="hero-text">
+            <h1 class="hero-title">Red Fingers</h1>
+            <p class="hero-subtitle">Put your fingers on the beat</p>
+            <div class="hero-stats">
+              <div class="stat">
+                <span class="stat-number">150M+</span>
+                <span class="stat-label">Views</span>
+              </div>
+              <div class="stat">
+                <span class="stat-number">406K</span>
+                <span class="stat-label">Monthly Listeners</span>
+              </div>
+              <div class="stat">
+                <span class="stat-number">Los Angeles</span>
+                <span class="stat-label">Based</span>
+              </div>
+            </div>
+            <div class="hero-cta">
+              <a href="#songs" class="btn btn-primary">Listen Now</a>
+              <a href="#contact" class="btn btn-secondary">Get in Touch</a>
+            </div>
+          </div>
+        </div>
+        <div class="scroll-indicator">
+          <div class="scroll-arrow"></div>
+        </div>
+      </section>
+
+      <!-- About Section -->
+      <section id="about" class="about">
+        <div class="container">
+          <div class="section-header">
+            <h2 class="section-title">About</h2>
+            <div class="section-line"></div>
+          </div>
+          <div class="about-content">
+            <div class="about-quote">
+              <blockquote>
+                "The Red Fingers project means the search for the new and the breaking of certain traditions when creating music. My idea is to be able to find a new and different sound every time I work with an artist."
+              </blockquote>
+            </div>
+            <div class="about-text">
+              <p>Red Fingers is a Chilean producer, musician and composer, based in Los Angeles, United States. He has worked with renowned artists such as Bad Bunny, Rauw Alejandro, Paloma Mami, Pablo Chill-E, among others. His collaborations and songs as a producer already have more than 150 million views on different platforms, making him one of the music producers with the greatest rise and projection in the industry.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Hilo Rojo Album Section -->
+      <section id="songs" class="album-section">
+        <div class="container">
+          <div class="section-header">
+            <h2 class="section-title"><span class="hilo-white">HILO</span> <span class="rojo-red">ROJO</span></h2>
+            <div class="section-line"></div>
+          </div>
+          <div class="album-content">
+            <div class="album-info">
+              <div class="album-cover">
+                <img src="https://img.youtube.com/vi/hgQPG8cptvw/maxresdefault.jpg" alt="Hilo Rojo Album Cover" class="album-img">
+                <div class="album-play-overlay" onclick="playVideo('hgQPG8cptvw')">
+                  <div class="album-play-button">▶</div>
+                </div>
+              </div>
+            </div>
+            <div class="album-details">
+              <p class="album-artist">Red Fingers x NVSCVR</p>
+              <p class="album-description">
+                A 10-track album that explores themes of attachment, nostalgia, and emotional connections. 
+                Available now on all streaming platforms.
+              </p>
+              <div class="album-explore">
+                <a href="hilorojo.html" class="explore-album-btn">
+                  <span>Explore Album</span>
+                  <svg viewBox="0 0 24 24" fill="currentColor">
+                    <path d="M12 4l-1.41 1.41L16.17 11H4v2h12.17l-5.58 5.59L12 20l8-8z"/>
+                  </svg>
+                </a>
+              </div>
+              <div class="album-links">
+                <a href="https://open.spotify.com/album/2TZ7Nk5cAwrWcyKzH7ULYc" target="_blank" class="platform-link spotify">
+                  <svg viewBox="0 0 24 24" fill="currentColor">
+                    <path d="M12 0C5.4 0 0 5.4 0 12s5.4 12 12 12 12-5.4 12-12S18.66 0 12 0zm5.521 17.34c-.24.359-.66.48-1.021.24-2.82-1.74-6.36-2.101-10.561-1.141-.418.122-.779-.179-.899-.539-.12-.421.18-.78.54-.9 4.56-1.021 8.52-.6 11.64 1.32.42.18.479.659.301 1.02zm1.44-3.3c-.301.42-.841.6-1.262.3-3.239-1.98-8.159-2.58-11.939-1.38-.479.12-1.02-.12-1.14-.6-.12-.48.12-1.021.6-1.141C9.6 9.9 15 10.561 18.72 12.84c.361.181.54.78.241 1.2zm.12-3.36C15.24 8.4 8.82 8.16 5.16 9.301c-.6.179-1.2-.181-1.38-.721-.18-.601.18-1.2.72-1.381 4.26-1.26 11.28-1.02 15.721 1.621.539.3.719 1.02.42 1.56-.299.421-1.02.599-1.559.3z"/>
+                  </svg>
+                  Spotify
+                </a>
+                <a href="https://www.youtube.com/watch?v=hgQPG8cptvw&list=PLWBmfNItyC00d8rteANbDWKwEYfjQL2bm&index=1" target="_blank" class="platform-link youtube">
+                  <svg viewBox="0 0 24 24" fill="currentColor">
+                    <path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/>
+                  </svg>
+                  YouTube
+                </a>
+                <a href="https://music.apple.com/cl/album/hilo-rojo/1824322777" target="_blank" class="platform-link apple">
+                  <svg viewBox="0 0 24 24" fill="currentColor">
+                    <path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.81-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M13 3.5c.73-.83 1.94-1.46 2.94-1.5.13 1.17-.34 2.35-1.04 3.19-.69.85-1.83 1.51-2.95 1.42-.15-1.15.41-2.35 1.05-3.11z"/>
+                  </svg>
+                  Apple Music
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Latest Tracks Section -->
+      <section class="latest-tracks">
+        <div class="container">
+          <div class="section-header">
+            <h2 class="section-title">Productions & Co-productions</h2>
+            <div class="section-line"></div>
+            <p class="section-description">
+              Latest productions. For the complete list, check out this 
+              <a href="https://open.spotify.com/playlist/4V8sC0B5IsoPF2AHRDDaak?si=6c51cbaa07da4d9a" 
+                 target="_blank" rel="noopener noreferrer" class="spotify-link">
+                Spotify playlist
+              </a>
+            </p>
+          </div>
+          <div class="videos-container">
+            <div class="loading-videos" id="tracks-loading">
+              <div class="loading-spinner-small"></div>
+              <span>Loading tracks...</span>
+            </div>
+            <div class="videos-grid" id="tracks-grid" style="display: none;">
+              <!-- Tracks will be loaded dynamically -->
+            </div>
+            <div class="videos-navigation" id="tracks-navigation" style="display: none;">
+              <button class="nav-btn nav-btn-prev" id="tracks-prev">
+                <svg viewBox="0 0 24 24" fill="currentColor">
+                  <path d="M15.41 7.41L14 6l-6 6 6 6 1.41-1.41L10.83 12z"/>
+                </svg>
+              </button>
+              <div class="nav-dots" id="tracks-dots"></div>
+              <button class="nav-btn nav-btn-next" id="tracks-next">
+                <svg viewBox="0 0 24 24" fill="currentColor">
+                  <path d="M10 6L8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z"/>
+                </svg>
+              </button>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Gallery Section -->
+      <section id="social-media" class="gallery">
+        <div class="container">
+          <div class="section-header">
+            <h2 class="section-title">Behind the Scenes</h2>
+            <div class="section-line"></div>
+            <p class="section-description">Moments from the studio and beyond</p>
+          </div>
+          <div class="gallery-container">
+            <div class="gallery-slider" id="gallery-slider">
+              <!-- Initial load: only first 8 images for faster loading -->
+              <div class="gallery-item"><img data-src="img/instagram-1.jpeg" alt="Behind the scenes" loading="lazy" class="lazy-image"></div>
+              <div class="gallery-item"><img data-src="img/instagram-2.jpeg" alt="Studio session" loading="lazy" class="lazy-image"></div>
+              <div class="gallery-item"><img data-src="img/instagram-3.jpeg" alt="Recording" loading="lazy" class="lazy-image"></div>
+              <div class="gallery-item"><img data-src="img/instagram-4.jpeg" alt="Music production" loading="lazy" class="lazy-image"></div>
+              <div class="gallery-item"><img data-src="img/instagram-5.jpeg" alt="Creative process" loading="lazy" class="lazy-image"></div>
+              <div class="gallery-item"><img data-src="img/instagram-6.jpeg" alt="Studio work" loading="lazy" class="lazy-image"></div>
+              <div class="gallery-item"><img data-src="img/instagram-7.jpeg" alt="Collaboration" loading="lazy" class="lazy-image"></div>
+              <div class="gallery-item"><img data-src="img/instagram-8.jpeg" alt="Performance" loading="lazy" class="lazy-image"></div>
+              <!-- Remaining images loaded progressively -->
+              <div class="gallery-item"><img data-src="img/instagram-9.jpeg" alt="Studio life" loading="lazy" class="lazy-image"></div>
+              <div class="gallery-item"><img data-src="img/instagram-10.jpeg" alt="Recording session" loading="lazy" class="lazy-image"></div>
+              <div class="gallery-item"><img data-src="img/instagram-11.png" alt="Music creation" loading="lazy" class="lazy-image"></div>
+              <div class="gallery-item"><img data-src="img/instagram-12.jpeg" alt="Behind scenes" loading="lazy" class="lazy-image"></div>
+              <div class="gallery-item"><img data-src="img/instagram-13.png" alt="Creative work" loading="lazy" class="lazy-image"></div>
+              <div class="gallery-item"><img data-src="img/instagram-14.png" alt="Studio session" loading="lazy" class="lazy-image"></div>
+              <div class="gallery-item"><img data-src="img/instagram-15.jpeg" alt="Music making" loading="lazy" class="lazy-image"></div>
+              <div class="gallery-item"><img data-src="img/instagram-16.png" alt="Production" loading="lazy" class="lazy-image"></div>
+              <div class="gallery-item"><img data-src="img/instagram-17.jpeg" alt="Recording" loading="lazy" class="lazy-image"></div>
+              <div class="gallery-item"><img data-src="img/instagram-18.png" alt="Studio work" loading="lazy" class="lazy-image"></div>
+              <div class="gallery-item"><img data-src="img/instagram-19.png" alt="Behind scenes" loading="lazy" class="lazy-image"></div>
+              <div class="gallery-item"><img data-src="img/instagram-20.png" alt="Creative process" loading="lazy" class="lazy-image"></div>
+              <div class="gallery-item"><img data-src="img/instagram-21.png" alt="Music production" loading="lazy" class="lazy-image"></div>
+              <div class="gallery-item"><img data-src="img/instagram-22.jpeg" alt="Studio session" loading="lazy" class="lazy-image"></div>
+              <div class="gallery-item"><img data-src="img/instagram-23.png" alt="Collaboration" loading="lazy" class="lazy-image"></div>
+              <div class="gallery-item"><img data-src="img/instagram-24.png" alt="Performance" loading="lazy" class="lazy-image"></div>
+              <div class="gallery-item"><img data-src="img/instagram-25.jpeg" alt="Studio life" loading="lazy" class="lazy-image"></div>
+              <div class="gallery-item"><img data-src="img/instagram-26.jpeg" alt="Recording session" loading="lazy" class="lazy-image"></div>
+              <div class="gallery-item"><img data-src="img/instagram-27.jpeg" alt="Music creation" loading="lazy" class="lazy-image"></div>
+              <div class="gallery-item"><img data-src="img/instagram-28.jpeg" alt="Behind scenes" loading="lazy" class="lazy-image"></div>
+              <div class="gallery-item"><img data-src="img/instagram-29.png" alt="Creative work" loading="lazy" class="lazy-image"></div>
+              <div class="gallery-item"><img data-src="img/instagram-30.jpeg" alt="Studio session" loading="lazy" class="lazy-image"></div>
+              <div class="gallery-item"><img data-src="img/instagram-31.jpeg" alt="Music making" loading="lazy" class="lazy-image"></div>
+              <div class="gallery-item"><img data-src="img/instagram-32.jpeg" alt="Production" loading="lazy" class="lazy-image"></div>
+            </div>
+            <button class="gallery-nav gallery-prev" id="gallery-prev">
+              <svg viewBox="0 0 24 24" fill="currentColor">
+                <path d="M15.41 7.41L14 6l-6 6 6 6 1.41-1.41L10.83 12z"/>
+              </svg>
+            </button>
+            <button class="gallery-nav gallery-next" id="gallery-next">
+              <svg viewBox="0 0 24 24" fill="currentColor">
+                <path d="M10 6L8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z"/>
+              </svg>
+            </button>
+          </div>
+        </div>
+      </section>
+
+      <!-- Contact Section -->
+      <section id="contact" class="contact">
+        <div class="container">
+          <div class="section-header">
+            <h2 class="section-title">Let's Work Together</h2>
+            <div class="section-line"></div>
+            <p class="section-description">Ready to create something amazing? Get in touch for collaborations and bookings.</p>
+          </div>
+          <div class="contact-content">
+            <div class="contact-info">
+              <div class="contact-item">
+                <div class="contact-icon">📍</div>
+                <div class="contact-text">
+                  <h3>Location</h3>
+                  <p>Los Angeles, United States</p>
+                </div>
+              </div>
+              <div class="contact-item">
+                <div class="contact-icon">🎵</div>
+                <div class="contact-text">
+                  <h3>Specialties</h3>
+                  <p>Music Production, Mixing, Collaboration</p>
+                </div>
+              </div>
+              <div class="contact-item">
+                <div class="contact-icon">📊</div>
+                <div class="contact-text">
+                  <h3>Experience</h3>
+                  <p>150M+ views across platforms</p>
+                </div>
+              </div>
+            </div>
+            <form class="contact-form" action="enviar.php" method="post">
+              <div class="form-group">
+                <input type="text" id="nombre" name="nombre" required placeholder=" ">
+                <label for="nombre">Your Name</label>
+              </div>
+              <div class="form-group">
+                <input type="email" id="email" name="email" required placeholder=" ">
+                <label for="email">Email Address</label>
+              </div>
+              <div class="form-group">
+                <textarea id="mensaje" name="mensaje" required placeholder=" " rows="5"></textarea>
+                <label for="mensaje">Your Message</label>
+              </div>
+              <button type="submit" class="btn btn-primary btn-full">
+                <span>Send Message</span>
+                <svg viewBox="0 0 24 24" fill="currentColor">
+                  <path d="M2.01 21L23 12 2.01 3 2 10l15 2-15 2z"/>
+                </svg>
+              </button>
+            </form>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+      <div class="container">
+        <div class="footer-content">
+          <div class="footer-brand">
+            <h3>Red Fingers</h3>
+            <p>Put your fingers on the beat</p>
+          </div>
+          <div class="social-links">
+            <a href="https://www.instagram.com/redfingers/" target="_blank" class="social-link" aria-label="Instagram">
+              <svg viewBox="0 0 24 24" fill="currentColor">
+                <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/>
+              </svg>
+            </a>
+            <a href="https://youtube.com/channel/UCdTq7tv2UiwRo2bAiMUbCrw?si=gZORTNdqZeihsRk8" target="_blank" class="social-link" aria-label="YouTube">
+              <svg viewBox="0 0 24 24" fill="currentColor">
+                <path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/>
+              </svg>
+            </a>
+            <a href="https://soundcloud.com/redfingers" target="_blank" class="social-link" aria-label="SoundCloud">
+              <svg viewBox="0 0 24 24" fill="currentColor">
+                <path d="M1.175 12.225c-.051 0-.094.046-.101.105l-.233 2.154.233 2.105c.007.058.05.104.101.104.053 0 .094-.046.101-.104l.277-2.105-.277-2.154c-.007-.059-.048-.105-.101-.105zm1.062.936c-.058 0-.104.056-.104.125l-.166 1.289.166 1.295c0 .069.046.125.104.125.059 0 .104-.056.104-.125l.194-1.295-.194-1.289c0-.069-.045-.125-.104-.125zm1.062.317c-.067 0-.125.066-.125.15l-.138.972.138.977c0 .084.058.15.125.15.068 0 .125-.066.125-.15l.162-.977-.162-.972c0-.084-.057-.15-.125-.15zm1.062.128c-.077 0-.139.076-.139.171l-.111.844.111.849c0 .095.062.171.139.171.076 0 .138-.076.138-.171l.129-.849-.129-.844c0-.095-.062-.171-.138-.171zm1.062.092c-.086 0-.156.086-.156.194l-.083.752.083.757c0 .108.07.194.156.194.087 0 .157-.086.157-.194l.097-.757-.097-.752c0-.108-.07-.194-.157-.194zm1.062.073c-.096 0-.174.096-.174.217l-.055.679.055.684c0 .121.078.217.174.217.097 0 .175-.096.175-.217l.064-.684-.064-.679c0-.121-.078-.217-.175-.217zm1.062.055c-.105 0-.191.106-.191.238l-.028.606.028.611c0 .132.086.238.191.238.106 0 .192-.106.192-.238l.032-.611-.032-.606c0-.132-.086-.238-.192-.238zm1.062.037c-.114 0-.208.116-.208.26v.533c0 .144.094.26.208.26.115 0 .209-.116.209-.26v-.533c0-.144-.094-.26-.209-.26zm1.062.018c-.124 0-.226.126-.226.282v.489c0 .156.102.282.226.282.125 0 .227-.126.227-.282v-.489c0-.156-.102-.282-.227-.282zm1.062 0c-.133 0-.243.136-.243.305v.444c0 .169.11.305.243.305.134 0 .244-.136.244-.305v-.444c0-.169-.11-.305-.244-.305zm1.062-.018c-.143 0-.261.146-.261.327v.4c0 .181.118.327.261.327.144 0 .262-.146.262-.327v-.4c0-.181-.118-.327-.262-.327zm1.062-.037c-.152 0-.278.156-.278.349v.355c0 .193.126.349.278.349.153 0 .279-.156.279-.349v-.355c0-.193-.126-.349-.279-.349zm1.062-.055c-.162 0-.295.166-.295.372v.311c0 .206.133.372.295.372.163 0 .296-.166.296-.372v-.311c0-.206-.133-.372-.296-.372zm1.062-.073c-.171 0-.312.176-.312.394v.267c0 .218.141.394.312.394.172 0 .313-.176.313-.394v-.267c0-.218-.141-.394-.313-.394zm1.062-.092c-.181 0-.329.186-.329.417v.222c0 .231.148.417.329.417.182 0 .33-.186.33-.417v-.222c0-.231-.148-.417-.33-.417zm1.062-.128c-.19 0-.347.196-.347.439v.178c0 .243.157.439.347.439.191 0 .348-.196.348-.439v-.178c0-.243-.157-.439-.348-.439zm1.062-.317c-.2 0-.364.206-.364.461v.133c0 .255.164.461.364.461.201 0 .365-.206.365-.461v-.133c0-.255-.164-.461-.365-.461zm1.062-.936c-.209 0-.381.216-.381.483v.089c0 .267.172.483.381.483.21 0 .382-.216.382-.483v-.089c0-.267-.172-.483-.382-.483z"/>
+              </svg>
+            </a>
+            <a href="https://open.spotify.com/intl-es/artist/1tLTF6ypPIzjzarePwdcNo?si=RvuW1U_3QwOWlDQtI5mnHg/" target="_blank" class="social-link" aria-label="Spotify">
+              <svg viewBox="0 0 24 24" fill="currentColor">
+                <path d="M12 0C5.4 0 0 5.4 0 12s5.4 12 12 12 12-5.4 12-12S18.66 0 12 0zm5.521 17.34c-.24.359-.66.48-1.021.24-2.82-1.74-6.36-2.101-10.561-1.141-.418.122-.779-.179-.899-.539-.12-.421.18-.78.54-.9 4.56-1.021 8.52-.6 11.64 1.32.42.18.479.659.301 1.02zm1.44-3.3c-.301.42-.841.6-1.262.3-3.239-1.98-8.159-2.58-11.939-1.38-.479.12-1.02-.12-1.14-.6-.12-.48.12-1.021.6-1.141C9.6 9.9 15 10.561 18.72 12.84c.361.181.54.78.241 1.2zm.12-3.36C15.24 8.4 8.82 8.16 5.16 9.301c-.6.179-1.2-.181-1.38-.721-.18-.601.18-1.2.72-1.381 4.26-1.26 11.28-1.02 15.721 1.621.539.3.719 1.02.42 1.56-.299.421-1.02.599-1.559.3z"/>
+              </svg>
+            </a>
+          </div>
+        </div>
+        <div class="footer-bottom">
+          <p>&copy; 2025 Red Fingers. All rights reserved.</p>
+        </div>
+      </div>
+    </footer>
+
+    <script src="index.js"></script>
+    <script src="videos.js"></script>
+  </body>
+</html>
