@@ -1,6 +1,6 @@
-// Ambient background: slow-drifting light dust over the page — embers of a
-// night city seen from a window. Mostly dim red, a few warm amber sparks and
-// the faintest cold-pink drift. Respects prefers-reduced-motion.
+// Ambient background: embers drifting off something burning far below —
+// firefly-like glow, mostly red, with a few warm amber sparks. Respects
+// prefers-reduced-motion.
 (function () {
     const canvas = document.getElementById('ambient');
     if (!canvas) return;
@@ -10,10 +10,10 @@
 
     // color, weight (probability), alpha range
     const PALETTE = [
-        { rgb: '200, 29, 36', weight: 0.62, alpha: [0.10, 0.32] },   // ember red
-        { rgb: '217, 154, 78', weight: 0.18, alpha: [0.06, 0.18] },  // lantern amber
-        { rgb: '231, 182, 193', weight: 0.10, alpha: [0.04, 0.12] }, // faint petal pink
-        { rgb: '140, 190, 220', weight: 0.10, alpha: [0.04, 0.10] }  // cold city blue
+        { rgb: '220, 38, 44', weight: 0.82, alpha: [0.42, 0.9] },    // ember red
+        { rgb: '223, 140, 60', weight: 0.12, alpha: [0.26, 0.5] },   // lantern amber
+        { rgb: '231, 182, 193', weight: 0.03, alpha: [0.12, 0.24] }, // faint petal pink
+        { rgb: '140, 190, 220', weight: 0.03, alpha: [0.12, 0.22] }  // cold city blue
     ];
 
     function pickColor() {
@@ -32,36 +32,43 @@
         return {
             x: Math.random() * canvas.width,
             y: anywhere ? Math.random() * canvas.height : canvas.height + 4,
-            r: 0.6 + Math.random() * 1.6,
+            r: 1.5 + Math.random() * 3.2,
             vy: -(0.08 + Math.random() * 0.22),
             vx: (Math.random() - 0.5) * 0.12,
             drift: Math.random() * Math.PI * 2,
+            flicker: Math.random() * Math.PI * 2,
+            flickerSpeed: 0.02 + Math.random() * 0.04,
             rgb: c.rgb,
-            alpha: c.alpha[0] + Math.random() * (c.alpha[1] - c.alpha[0])
+            baseAlpha: c.alpha[0] + Math.random() * (c.alpha[1] - c.alpha[0])
         };
     }
 
     function resize() {
         canvas.width = window.innerWidth;
         canvas.height = window.innerHeight;
-        const count = Math.min(48, Math.max(16, Math.floor(canvas.width / 30)));
+        const count = Math.min(70, Math.max(28, Math.floor(canvas.width / 20)));
         particles = Array.from({ length: count }, () => makeParticle(true));
     }
 
     function drawFrame() {
         ctx.clearRect(0, 0, canvas.width, canvas.height);
         for (const p of particles) {
+            const alpha = p.baseAlpha * (0.55 + 0.45 * Math.sin(p.flicker));
+            ctx.shadowColor = `rgba(${p.rgb}, ${Math.min(alpha * 1.6, 1)})`;
+            ctx.shadowBlur = p.r * 6;
             ctx.beginPath();
             ctx.arc(p.x, p.y, p.r, 0, Math.PI * 2);
-            ctx.fillStyle = `rgba(${p.rgb}, ${p.alpha})`;
+            ctx.fillStyle = `rgba(${p.rgb}, ${alpha})`;
             ctx.fill();
         }
+        ctx.shadowBlur = 0;
     }
 
     function step() {
         for (let i = 0; i < particles.length; i++) {
             const p = particles[i];
             p.drift += 0.008;
+            p.flicker += p.flickerSpeed;
             p.x += p.vx + Math.sin(p.drift) * 0.08;
             p.y += p.vy;
             if (p.y < -6 || p.x < -6 || p.x > canvas.width + 6) {
