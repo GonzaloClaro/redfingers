@@ -19,12 +19,14 @@
     <meta name="twitter:image" content="https://www.redfingers.red/img/landing.png">
 
     <link rel="stylesheet" type="text/css" href="styles.css">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Manrope:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@300;400;500&display=swap" rel="stylesheet">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   </head>
 
   <body>
+    <canvas id="ambient" aria-hidden="true"></canvas>
+
     <!-- Loading Screen -->
     <div id="loading-screen" class="loading-screen">
       <div class="loading-content">
@@ -66,6 +68,7 @@
             <img src="img/landing.png" alt="Red Fingers" class="hero-img">
           </div>
           <div class="hero-text">
+            <span class="hero-eyebrow">PRODUCER &mdash; LOS ANGELES</span>
             <h1 class="hero-title">Red Fingers</h1>
             <p class="hero-subtitle">Put your fingers on the beat</p>
             <div class="hero-stats">
@@ -125,7 +128,7 @@
               <div class="album-cover">
                 <img src="https://img.youtube.com/vi/hgQPG8cptvw/maxresdefault.jpg" alt="Hilo Rojo Album Cover" class="album-img">
                 <div class="album-play-overlay" onclick="playVideo('hgQPG8cptvw')">
-                  <div class="album-play-button">▶</div>
+                  <div class="album-play-button"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M8 5v14l11-7z"/></svg></div>
                 </div>
               </div>
             </div>
@@ -275,21 +278,33 @@
           <div class="contact-content">
             <div class="contact-info">
               <div class="contact-item">
-                <div class="contact-icon">📍</div>
+                <div class="contact-icon">
+                  <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                    <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5a2.5 2.5 0 1 1 0-5 2.5 2.5 0 0 1 0 5z"/>
+                  </svg>
+                </div>
                 <div class="contact-text">
                   <h3>Location</h3>
                   <p>Los Angeles, United States</p>
                 </div>
               </div>
               <div class="contact-item">
-                <div class="contact-icon">🎵</div>
+                <div class="contact-icon">
+                  <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                    <path d="M12 3v10.55c-.59-.34-1.27-.55-2-.55-2.21 0-4 1.79-4 4s1.79 4 4 4 4-1.79 4-4V7h4V3h-6z"/>
+                  </svg>
+                </div>
                 <div class="contact-text">
                   <h3>Specialties</h3>
                   <p>Music Production, Mixing, Collaboration</p>
                 </div>
               </div>
               <div class="contact-item">
-                <div class="contact-icon">📊</div>
+                <div class="contact-icon">
+                  <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                    <path d="M4 20h3V10H4v10zm6.5 0h3V4h-3v16zM17 20h3v-7h-3v7z"/>
+                  </svg>
+                </div>
                 <div class="contact-text">
                   <h3>Experience</h3>
                   <p>150M+ views across platforms</p>
@@ -297,7 +312,11 @@
               </div>
             </div>
             <div class="contact-form contact-email-card">
-              <div class="contact-icon">✉️</div>
+              <div class="contact-icon">
+                <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                  <path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4-8 5-8-5V6l8 5 8-5v2z"/>
+                </svg>
+              </div>
               <h3>Email</h3>
               <a href="mailto:contact@redfingers.red" class="btn btn-primary btn-full">
                 <span>contact@redfingers.red</span>
@@ -345,6 +364,7 @@
       </div>
     </footer>
 
+    <script src="ambient.js"></script>
     <script src="videos.js"></script>
   </body>
 </html>

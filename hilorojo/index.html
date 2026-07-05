@@ -19,12 +19,14 @@
     <meta name="twitter:image" content="https://www.redfingers.red/img/landing.png">
 
     <link rel="stylesheet" type="text/css" href="../styles.css">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Manrope:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@300;400;500&display=swap" rel="stylesheet">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   </head>
 
   <body>
+    <canvas id="ambient" aria-hidden="true"></canvas>
+
     <!-- Loading Screen -->
     <div id="loading-screen" class="loading-screen">
       <div class="loading-content">
@@ -192,7 +194,7 @@
               <div class="track-number">01</div>
               <div class="track-thumbnail">
                 <img src="https://img.youtube.com/vi/hgQPG8cptvw/mqdefault.jpg" alt="HILO" loading="lazy">
-                <div class="track-play-btn">▶</div>
+                <div class="track-play-btn"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M8 5v14l11-7z"/></svg></div>
               </div>
               <div class="track-info">
                 <h3 class="track-title">HILO</h3>
@@ -205,7 +207,7 @@
               <div class="track-number">02</div>
               <div class="track-thumbnail">
                 <img src="https://img.youtube.com/vi/fZqQv9QgFtw/mqdefault.jpg" alt="ROJO" loading="lazy">
-                <div class="track-play-btn">▶</div>
+                <div class="track-play-btn"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M8 5v14l11-7z"/></svg></div>
               </div>
               <div class="track-info">
                 <h3 class="track-title">ROJO</h3>
@@ -218,7 +220,7 @@
               <div class="track-number">03</div>
               <div class="track-thumbnail">
                 <img src="https://img.youtube.com/vi/iDTyXvwrkY0/mqdefault.jpg" alt="UNSEND" loading="lazy">
-                <div class="track-play-btn">▶</div>
+                <div class="track-play-btn"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M8 5v14l11-7z"/></svg></div>
               </div>
               <div class="track-info">
                 <h3 class="track-title">UNSEND</h3>
@@ -231,7 +233,7 @@
               <div class="track-number">04</div>
               <div class="track-thumbnail">
                 <img src="https://img.youtube.com/vi/khMPFX83gbw/mqdefault.jpg" alt="DE A POCO" loading="lazy">
-                <div class="track-play-btn">▶</div>
+                <div class="track-play-btn"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M8 5v14l11-7z"/></svg></div>
               </div>
               <div class="track-info">
                 <h3 class="track-title">DE A POCO</h3>
@@ -244,7 +246,7 @@
               <div class="track-number">05</div>
               <div class="track-thumbnail">
                 <img src="https://img.youtube.com/vi/mSjuKRjkEdY/mqdefault.jpg" alt="SETEAN2TE" loading="lazy">
-                <div class="track-play-btn">▶</div>
+                <div class="track-play-btn"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M8 5v14l11-7z"/></svg></div>
               </div>
               <div class="track-info">
                 <h3 class="track-title">SETEAN2TE</h3>
@@ -257,7 +259,7 @@
               <div class="track-number">06</div>
               <div class="track-thumbnail">
                 <img src="https://img.youtube.com/vi/nvscB2w8o4Q/mqdefault.jpg" alt="CAMERA ROLL" loading="lazy">
-                <div class="track-play-btn">▶</div>
+                <div class="track-play-btn"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M8 5v14l11-7z"/></svg></div>
               </div>
               <div class="track-info">
                 <h3 class="track-title">CAMERA ROLL</h3>
@@ -270,7 +272,7 @@
               <div class="track-number">07</div>
               <div class="track-thumbnail">
                 <img src="https://img.youtube.com/vi/vWM1cYBktPk/mqdefault.jpg" alt="SOLO" loading="lazy">
-                <div class="track-play-btn">▶</div>
+                <div class="track-play-btn"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M8 5v14l11-7z"/></svg></div>
               </div>
               <div class="track-info">
                 <h3 class="track-title">SOLO</h3>
@@ -283,7 +285,7 @@
               <div class="track-number">08</div>
               <div class="track-thumbnail">
                 <img src="https://img.youtube.com/vi/rZXb_uV1678/mqdefault.jpg" alt="TRUST" loading="lazy">
-                <div class="track-play-btn">▶</div>
+                <div class="track-play-btn"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M8 5v14l11-7z"/></svg></div>
               </div>
               <div class="track-info">
                 <h3 class="track-title">TRUST</h3>
@@ -296,7 +298,7 @@
               <div class="track-number">09</div>
               <div class="track-thumbnail">
                 <img src="https://img.youtube.com/vi/fMGeog1jd7M/mqdefault.jpg" alt="A TU MODO" loading="lazy">
-                <div class="track-play-btn">▶</div>
+                <div class="track-play-btn"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M8 5v14l11-7z"/></svg></div>
               </div>
               <div class="track-info">
                 <h3 class="track-title">A TU MODO</h3>
@@ -309,7 +311,7 @@
               <div class="track-number">10</div>
               <div class="track-thumbnail">
                 <img src="https://img.youtube.com/vi/G_mrE_vwLYs/mqdefault.jpg" alt="PENSARTE" loading="lazy">
-                <div class="track-play-btn">▶</div>
+                <div class="track-play-btn"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M8 5v14l11-7z"/></svg></div>
               </div>
               <div class="track-info">
                 <h3 class="track-title">PENSARTE</h3>
@@ -359,6 +361,7 @@
       </div>
     </footer>
 
+    <script src="../ambient.js"></script>
     <script src="../videos.js"></script>
   </body>
 </html>
