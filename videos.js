@@ -11,6 +11,9 @@ class RedFingersLatestTracks {
         // Latest tracks with real YouTube IDs
         return [
             { id: 'g08y_x83d5E', title: 'Rauw Alejandro, Bad Bunny - Qué Pasaría' },
+            { id: 'm3Fy2OrSDiQ', title: 'Kali Uchis - Muévelo' },
+            { id: 'jJ5Fg4Wwzp0', title: 'Red Fingers, Baby Jey & Kuroh - SE K TU' },
+            { id: '3Rf5Kr2x5rQ', title: 'Paloma Mami - Exmaquina' },
             { id: 'JwiQoZPXV24', title: 'Pablo Chill-E - CORA ROTO ft Pailita' },
             { id: 'oNAx3WJiEsY', title: 'Katteyes x Kidd Voodoo - PONTE LOKITA' },
             { id: '32jZefMrweI', title: 'Paloma Mami, Marcianeke, ITHAN NY - DOSiS' },
