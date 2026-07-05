@@ -172,26 +172,11 @@ function playVideo(videoId) {
     });
 }
 
-// Initialize when DOM is loaded
+// Initialize once the DOM is ready (script is loaded at end of body, so DOM is already parsed)
 document.addEventListener('DOMContentLoaded', () => {
-    console.log('DOM Content Loaded - initializing...');
     new RedFingersLatestTracks();
     initializeUI();
 });
-
-// Backup initialization in case DOMContentLoaded already fired
-if (document.readyState === 'loading') {
-    // Document is still loading
-    console.log('Document still loading, waiting for DOMContentLoaded');
-} else {
-    // Document has already loaded
-    console.log('Document already loaded, initializing immediately');
-    setTimeout(() => {
-        console.log('Backup initialization triggered');
-        new RedFingersLatestTracks();
-        initializeUI();
-    }, 100);
-}
 
 // Mobile optimizations
 if (window.innerWidth <= 768) {
@@ -199,74 +184,36 @@ if (window.innerWidth <= 768) {
     document.addEventListener('touchstart', () => {}, { passive: true });
 }
 
-// Additional fallback - hide loading screen when window loads
+// Hide loading screen once the page has fully loaded
 window.addEventListener('load', () => {
-    setTimeout(() => {
-        const loadingScreen = document.getElementById('loading-screen');
-        if (loadingScreen) {
-            loadingScreen.classList.add('hidden');
-            loadingScreen.style.display = 'none';
-        }
-    }, 100);
-});
-
-// Emergency fallback - force hide loading screen after 5 seconds
-setTimeout(() => {
     const loadingScreen = document.getElementById('loading-screen');
-    if (loadingScreen && !loadingScreen.classList.contains('hidden')) {
-        console.warn('Emergency loading screen hide triggered');
+    if (loadingScreen) {
         loadingScreen.classList.add('hidden');
-        loadingScreen.style.display = 'none';
+        setTimeout(() => {
+            loadingScreen.style.display = 'none';
+        }, 600);
     }
-}, 5000);
+});
 
 // UI Enhancement Functions
 function initializeUI() {
-    // Loading screen - hide faster and add multiple fallbacks
-    const hideLoadingScreen = () => {
-        const loadingScreen = document.getElementById('loading-screen');
-        if (loadingScreen) {
-            loadingScreen.classList.add('hidden');
-            // Force hide after transition
-            setTimeout(() => {
-                loadingScreen.style.display = 'none';
-            }, 600);
-        }
-    };
-
-    // Multiple fallback timers for loading screen
-    setTimeout(hideLoadingScreen, 800);  // Primary timer - much faster
-    setTimeout(hideLoadingScreen, 2000); // Fallback timer
-    setTimeout(hideLoadingScreen, 3000); // Emergency fallback
-
-    // Mobile navigation - Enhanced for better mobile support
+    // Mobile navigation
     const navToggle = document.getElementById('nav-toggle');
     const navMenu = document.getElementById('nav-menu');
 
-    console.log('Nav elements found:', { navToggle: !!navToggle, navMenu: !!navMenu });
-
     if (navToggle && navMenu) {
-        console.log('Setting up mobile navigation...');
-        
-        // Add visual feedback and accessibility
-        navToggle.style.cursor = 'pointer';
-        navToggle.setAttribute('role', 'button');
-        navToggle.setAttribute('aria-label', 'Toggle navigation menu');
-        navToggle.setAttribute('tabindex', '0');
-        
         // Ensure proper touch target size
+        navToggle.style.cursor = 'pointer';
         navToggle.style.minWidth = '44px';
         navToggle.style.minHeight = '44px';
         navToggle.style.display = 'flex';
         navToggle.style.alignItems = 'center';
         navToggle.style.justifyContent = 'center';
-        
+
         const toggleMenu = (e) => {
             e.preventDefault();
             e.stopPropagation();
-            
-            const isActive = navMenu.classList.contains('active');
-            
+
             // Toggle classes
             navMenu.classList.toggle('active');
             navToggle.classList.toggle('active');
@@ -336,8 +283,10 @@ function initializeUI() {
     // Smooth scrolling for navigation links
     document.querySelectorAll('.nav-link').forEach(link => {
         link.addEventListener('click', (e) => {
-            e.preventDefault();
             const targetId = link.getAttribute('href');
+            if (!targetId.startsWith('#')) return;
+
+            e.preventDefault();
             const targetSection = document.querySelector(targetId);
 
             if (targetSection) {
