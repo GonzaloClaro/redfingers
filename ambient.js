@@ -5,6 +5,18 @@
     const canvas = document.getElementById('ambient');
     if (!canvas) return;
 
+    // Position inline so the canvas never falls into document flow,
+    // even if a stale cached stylesheet lacks the #ambient rule.
+    Object.assign(canvas.style, {
+        position: 'fixed',
+        top: '0',
+        left: '0',
+        width: '100%',
+        height: '100%',
+        zIndex: '0',
+        pointerEvents: 'none'
+    });
+
     const ctx = canvas.getContext('2d');
     const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
