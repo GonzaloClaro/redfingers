@@ -233,10 +233,8 @@ function initializeUI() {
             }
         };
 
-        // Multiple event listeners for better compatibility
         navToggle.addEventListener('click', toggleMenu, { passive: false });
-        navToggle.addEventListener('touchend', toggleMenu, { passive: false });
-        
+
         // Keyboard support
         navToggle.addEventListener('keydown', (e) => {
             if (e.key === 'Enter' || e.key === ' ') {
@@ -252,9 +250,8 @@ function initializeUI() {
                 navToggle.setAttribute('aria-expanded', 'false');
                 document.body.style.overflow = '';
             };
-            
+
             link.addEventListener('click', closeMenu);
-            link.addEventListener('touchend', closeMenu);
         });
 
         // Close menu when clicking outside
